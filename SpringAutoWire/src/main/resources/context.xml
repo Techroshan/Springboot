@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+<bean id="emp" class="org.mdtis.SpringAutoWire.Employee"  autowire="byName">
+	<property name="empId" value="A101"> </property>
+	<property name="name" value="Rajkumar"> </property>
+	<property name="phoneNumber" value="12345789"></property>
+	
+</bean>
+
+<!-- - In byName we need to have same id name as defined in the  reference variable .
+	 - All the defined variable will be displayed here.
+	 - If the id is not matched with the  reference variable than we will get null value -->
+
+<bean id="perAddress" class="org.mdtis.SpringAutoWire.Address">
+	<property name="city" value="Biratngar"></property>
+	<property name="state" value="Morang"></property>
+	<property name="country" value="Nepal"></property>
+	
+</bean>
+
+
+<bean id="tempAddress" class="org.mdtis.SpringAutoWire.Address">
+	<property name="city" value="Kathmandu"></property>
+	<property name="state" value="Bagmati"></property>
+	<property name="country" value="Nepal"></property>
+	
+</bean>
+
+
+
+
+</beans>
+
